@@ -1,0 +1,46 @@
+body {
+    background-color: #68824C;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#greeting {
+    color: #F0F3E4;
+    text-align: center;
+}
+
+#mepic {
+    width: 300px;
+    border-radius: 150px;
+    border: 5px solid #E7EBD2;
+}
+
+#info {
+    display: flex;
+    margin: 10px;
+}
+
+.info-column {
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.narrow {
+    width: 30%;
+    background-color: #E7EBD2;
+}
+
+.wide {
+    width: 40%;
+    background-color: #F0F3E4;
+}
+
+.mytext {
+    color: #394D31;
+}
+
+.mypics {
+    width: 80%;
+    padding-bottom: 15px;
+}
