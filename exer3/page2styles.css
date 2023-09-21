@@ -31,5 +31,28 @@ body {
 }
 
 .results-container {
+    padding: 10px;
+    display: flex;
     margin-top: 120px;
+    background-color: pink;
+}
+
+.result-left {
+    background-color: rgb(201, 201, 255);
+    width: 70%;
+}
+
+.result-right {
+    background-color: purple;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    margin: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
 }
