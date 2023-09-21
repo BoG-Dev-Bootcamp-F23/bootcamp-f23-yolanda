@@ -8,9 +8,18 @@ body {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid gray ;
+}
+
+.back-button {
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 225, 230);
+    border: 1px solid rgb(209, 110, 127);
+    font-size: 15px;
+    color: rgb(209, 110, 127);
 }
 
 .search-bar {
@@ -31,7 +40,6 @@ body {
 }
 
 .results-container {
-    padding: 10px;
     display: flex;
     margin-top: 120px;
     background-color: pink;
@@ -55,4 +63,15 @@ body {
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
+    padding: 10px;
+}
+
+.result-title {
+    font-size: 20px;
+    color:rgb(209, 110, 127);
+}
+
+.result-text {
+    font-size: 15px;
+    color: grey;
 }
