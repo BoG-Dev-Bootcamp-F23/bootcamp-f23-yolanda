@@ -1,5 +1,5 @@
 /**
- * Let's do some coding warm up to get you started with JS!!!
+ * Let's do some coding warm up to get you started with JS!
  *
  */
 
@@ -40,8 +40,7 @@ function toLetterGrade(numGrade) {
  */
 function getEvenElements(array) {
     const evenArr = array.filter(num => (num % 2 == 0));
-    return evenArr;
-}
+    return evenArr;}
 
 /**
  * Task 3: Create a function that takes in a sentence and returns the LENGTH
@@ -105,7 +104,8 @@ function reverseArr(array) {
     return reversed;
 }
 
-// DO NOT EDIT BELOW THIS LINE
+// DO NOT EDIT BELOW THIS LINE -- the code is for testing purposes only!
+// To test your code, run `node warmUp.js` in your terminal
 
 import {
   testToLetterGrade,
