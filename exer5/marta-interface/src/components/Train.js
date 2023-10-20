@@ -1,5 +1,3 @@
-import rightArrow from "../images/rightArrow.png";
-
 export default function Train(props) {
     const { trainData } = props;
     const lineColorMap = {
@@ -17,9 +15,7 @@ export default function Train(props) {
         <div className="train-component">
             <div className="train-left-info">
                 <div className="train-path">
-                    <p className="train-path-text">{formatTitleCase(trainData["STATION"])}</p>
-                    <img src="" className="right-arrow" />
-                    <p className="train-path-text">{formatTitleCase(trainData["DESTINATION"])}</p>
+                    <p className="train-path-text">{formatTitleCase(trainData["STATION"])} to {formatTitleCase(trainData["DESTINATION"])}</p>
                 </div>
                 <div className="train-status">
                     <div
