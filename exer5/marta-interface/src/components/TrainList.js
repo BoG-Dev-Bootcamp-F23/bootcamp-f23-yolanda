@@ -6,31 +6,41 @@ export default function TrainList(props) {
     const { currColor, trainData } = props;
     const arrivals = trainData["RailArrivals"];
 
-    function setBtnStyle(thisTab) {
+    function makeButton(thisTab) {
         return (
-            {
-                backgroundColor: tab === thisTab ? "rgb(41, 41, 41)" : "white",
-                border: tab === thisTab ? "2px solid rgb(41, 41, 41)" : "2px solid #b6b6b6",
-                color: tab === thisTab ? "white": "black"
-            }
+            <button
+                className="button"
+                style={{
+                    backgroundColor: tab === thisTab ? "rgb(41, 41, 41)" : "white",
+                    border: tab === thisTab ? "2px solid rgb(41, 41, 41)" : "2px solid #b6b6b6",
+                    color: tab === thisTab ? "white": "black"
+                }}
+            >
+                {thisTab}
+            </button>
+            
         )
     }
 
     return (
         <div className="trainlist-component">
             <div className="buttons-container">
-                <button className="button" style={setBtnStyle("Arriving")}>Arriving</button>
-                <button className="button" style={setBtnStyle("Scheduled")}>Scheduled</button>
+                {makeButton("Arriving")}
+                {makeButton("Scheduled")}
                 {currColor === "GOLD" | currColor == "RED" ?
-                    <><button className="button" style={setBtnStyle("Northbound")}>Northbound</button>
-                    <button className="button" style={setBtnStyle("Southbound")}>Southbound</button></>
+                    <>{makeButton("Northbound")}
+                    {makeButton("Southbound")}</>
                     :
-                    <><button className="button" style={setBtnStyle("Eastbound")}>Eastbound</button>
-                    <button className="button" style={setBtnStyle("Westbound")}>Westbound</button></>
+                    <>{makeButton("Eastbound")}
+                    {makeButton("Westbound")}</>
                 }
             </div>
             <div className="trains-container">
-                <Train />
+                {arrivals.map((train) => {
+                    if (train["LINE"] === currColor) {
+                        return <Train trainData={train}/>
+                    }
+                })}
             </div>
         </div>
     )

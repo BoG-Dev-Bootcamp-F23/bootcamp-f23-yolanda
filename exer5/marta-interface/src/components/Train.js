@@ -2,7 +2,20 @@ import rightArrow from "../images/rightArrow.png";
 
 export default function Train(props) {
     const { trainData } = props;
-    console.log(rightArrow);
+    const lineColorMap = {
+        "GOLD": ["Gold", "gold"],
+        "RED": ["Red", "red"],
+        "BLUE": ["Blue", "blue"],
+        "GREEN": ["Green", "green"]
+    }
+
+    function getDelay() {
+        return (
+            trainData["DELAY"] === "T0S" ?
+            "Delayed" :
+            "On time"
+        )
+    }
 
     return (
         <div className="train-component">
@@ -13,12 +26,17 @@ export default function Train(props) {
                     <p className="train-path-text">Airport</p>
                 </div>
                 <div className="train-status">
-                    <div className="train-line">Gold</div>
-                    <p className="on-time">On time</p>
+                    <div
+                        className="train-line"
+                        style={{backgroundColor: lineColorMap[trainData["LINE"]][1]}}
+                    >
+                        {lineColorMap[trainData["LINE"]][0]}
+                    </div>
+                    <p className="on-time">{getDelay()}</p>
                 </div>
             </div>
             <p className="train-time">
-                    3
+                    <b>3</b>
                     <br />
                     min
             </p>
