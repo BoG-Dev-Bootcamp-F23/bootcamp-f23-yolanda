@@ -3,42 +3,42 @@ import rightArrow from "../images/rightArrow.png";
 export default function Train(props) {
     const { trainData } = props;
     const lineColorMap = {
-        "GOLD": ["Gold", "gold"],
-        "RED": ["Red", "red"],
-        "BLUE": ["Blue", "blue"],
-        "GREEN": ["Green", "green"]
+        "GOLD": "gold",
+        "RED": "red",
+        "BLUE": "blue",
+        "GREEN": "green"
     }
 
-    function getDelay() {
-        return (
-            trainData["DELAY"] === "T0S" ?
-            "Delayed" :
-            "On time"
-        )
+    function formatTitleCase(string) {
+        return string.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
     }
 
     return (
         <div className="train-component">
             <div className="train-left-info">
                 <div className="train-path">
-                    <p className="train-path-text">Midtown</p>
+                    <p className="train-path-text">{formatTitleCase(trainData["STATION"])}</p>
                     <img src="" className="right-arrow" />
-                    <p className="train-path-text">Airport</p>
+                    <p className="train-path-text">{formatTitleCase(trainData["DESTINATION"])}</p>
                 </div>
                 <div className="train-status">
                     <div
                         className="train-line"
-                        style={{backgroundColor: lineColorMap[trainData["LINE"]][1]}}
+                        style={{backgroundColor: lineColorMap[trainData["LINE"]]}}
                     >
-                        {lineColorMap[trainData["LINE"]][0]}
+                        {formatTitleCase(trainData["LINE"])}
                     </div>
-                    <p className="on-time">{getDelay()}</p>
+                    {
+                        trainData["DELAY"] === "T0S" ?
+                        <p className="on-time" style={{color: "red"}}>Delayed</p> :
+                        <p className="on-time" style={{color: "green"}}>On time</p>
+                    }
                 </div>
             </div>
             <p className="train-time">
-                    <b>3</b>
+                    <b>{trainData["WAITING_TIME"].split(" ")[0]}</b>
                     <br />
-                    min
+                    {trainData["WAITING_TIME"].split(" ")[1]}
             </p>
         </div>
     )

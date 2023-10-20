@@ -2,8 +2,8 @@ import Train from "./Train";
 import { useState } from "react";
 
 export default function TrainList(props) {
-    const [tab, setTab] = useState("Arriving");
     const { currColor, trainData } = props;
+    const [tab, setTab] = useState("Arriving");
     const arrivals = trainData["RailArrivals"];
 
     function makeButton(thisTab) {
