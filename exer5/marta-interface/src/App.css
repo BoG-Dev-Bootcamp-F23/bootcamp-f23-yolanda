@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.line-heading {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.main-container {
+  display: flex;
+  border-top: 4px solid #b6b6b6;
+  background-color: pink;
+}
+
+.navbar-component {
+  width: 30%;
+  background-color: rgb(41, 41, 41);
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.select-station-text {
+  font-size: 15px;
+  padding-left: 10px;
+  color: #b6b6b6;
+  margin: 0;
+}
+
+.station-option {
+  width: 70%;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  padding-left: 20px;
+  color: white
+}
+
+.trainlist-component {
+  width: 70%;
+  background-color: rgb(250, 186, 234);
+}
