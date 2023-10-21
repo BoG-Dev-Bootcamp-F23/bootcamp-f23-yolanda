@@ -6,6 +6,8 @@ export default function TrainList(props) {
     const [tab, setTab] = useState("Arriving");
     const arrivals = trainData["RailArrivals"];
 
+    console.log("rerender trainlist");
+
     function makeButton(thisTab) {
         return (
             <button
@@ -25,14 +27,14 @@ export default function TrainList(props) {
     return (
         <div className="trainlist-component">
             <div className="buttons-container">
-                {makeButton("Arriving")}
-                {makeButton("Scheduled")}
+                <button className="button">Arriving</button>
+                <button className="button">Scheduled</button>
                 {currColor === "GOLD" | currColor == "RED" ?
-                    <>{makeButton("Northbound")}
-                    {makeButton("Southbound")}</>
+                    <><button className="button">Northbound</button>
+                    <button className="button">Southbound</button></>
                     :
-                    <>{makeButton("Eastbound")}
-                    {makeButton("Westbound")}</>
+                    <><button className="button">Eastbound</button>
+                    <button className="button">Westbound</button></>
                 }
             </div>
             <div className="trains-container">

@@ -1,10 +1,10 @@
 export default function Train(props) {
     const { trainData } = props;
     const lineColorMap = {
-        "GOLD": "gold",
-        "RED": "red",
-        "BLUE": "blue",
-        "GREEN": "green"
+        "GOLD": "#d7ad22",
+        "RED": "#df2020",
+        "BLUE": "#1944c6",
+        "GREEN": "#1d7c28"
     }
 
     function formatTitleCase(string) {
