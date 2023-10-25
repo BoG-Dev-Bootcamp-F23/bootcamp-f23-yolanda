@@ -15,7 +15,7 @@ export default function Train(props) {
         <div className="train-component">
             <div className="train-left-info">
                 <div className="train-path">
-                    <p className="train-path-text">{formatTitleCase(trainData["STATION"])} to {formatTitleCase(trainData["DESTINATION"])}</p>
+                    <p className="train-path-text">{ formatTitleCase(trainData["STATION"]).slice(0, -8)} to {formatTitleCase(trainData["DESTINATION"]) }</p>
                 </div>
                 <div className="train-status">
                     <div
@@ -26,8 +26,8 @@ export default function Train(props) {
                     </div>
                     {
                         trainData["DELAY"] === "T0S" ?
-                        <p className="on-time" style={{color: "red"}}>Delayed</p> :
-                        <p className="on-time" style={{color: "green"}}>On time</p>
+                            <p className="on-time" style={{color: "red"}}>Delayed</p> :
+                            <p className="on-time" style={{color: "green"}}>On time</p>
                     }
                 </div>
             </div>
