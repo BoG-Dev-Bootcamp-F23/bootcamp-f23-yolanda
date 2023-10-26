@@ -1,15 +1,20 @@
+import "./LinesPage.css";
 import TrainList from "../components/TrainList";
 import NavBar from "../components/NavBar";
 import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function LinesPage() {
+    const navigate = useNavigate();
+    const params = useParams();
+
     // URLs
     const STATIONS_URL = "http://13.59.196.129:3001/stations/";
     const TRAINS_URL = "http://13.59.196.129:3001/arrivals/";
 
     const [loading, setLoading] = useState(true);
 
-    const [currColor, setCurrColor] = useState("GOLD"); // default to gold
+    const currColor = params.lineColor.toUpperCase();
     const [trainsData, setTrainsData] = useState();
     const [stationsData, setStationsData] = useState();
 
@@ -33,11 +38,12 @@ export default function LinesPage() {
 
     return (
         <div className="lines-page">
-            <div className="line-btns-container">
-                <button className="line-btn" style={{backgroundColor: "#d7ad22"}} onClick={() => setCurrColor("GOLD")}>Gold</button>
-                <button className="line-btn" style={{backgroundColor: "#df2020"}} onClick={() => setCurrColor("RED")}>Red</button>
-                <button className="line-btn" style={{backgroundColor: "#1944c6"}} onClick={() => setCurrColor("BLUE")}>Blue</button>
-                <button className="line-btn" style={{backgroundColor: "#1d7c28"}} onClick={() => setCurrColor("GREEN")}>Green</button>
+            <div className="home-header-container">
+                <h2 className="back-btn" onClick={() => navigate("/")}>Back to home</h2>
+                <button className="line-btn" style={{backgroundColor: "#d7ad22"}} onClick={() => navigate("/lines/gold")}>Gold</button>
+                <button className="line-btn" style={{backgroundColor: "#df2020"}} onClick={() => navigate("/lines/red")}>Red</button>
+                <button className="line-btn" style={{backgroundColor: "#1944c6"}} onClick={() => navigate("/lines/blue")}>Blue</button>
+                <button className="line-btn" style={{backgroundColor: "#1d7c28"}} onClick={() => navigate("/lines/green")}>Green</button>
             </div>
 
             <h1 className="line-heading">{currColor}</h1>

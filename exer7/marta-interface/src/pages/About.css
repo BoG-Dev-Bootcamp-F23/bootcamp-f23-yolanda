@@ -1,0 +1,38 @@
+.about-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #b6b6b6;
+}
+
+.about-text {
+    font-size: 50px;
+    margin: 10px;
+}
+
+.about-back-home {
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.about-back-home:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.about-main-container {
+    display: flex;
+}
+
+.about-info {
+    width: 40%;
+    padding: 10px 50px;
+    text-align: left;
+}
+
+.marta-map {
+    width: 40%;
+    padding: 40px 20px;
+}

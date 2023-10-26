@@ -1,0 +1,141 @@
+.linespage-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid #b6b6b6;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.back-btn:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.line-btn {
+    width: 70px;
+    padding: 5px 0;
+    font-size: 20px;
+    margin: 20px 10px 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .line-heading {
+    font-size: 50px;
+    margin: 10px;
+  }
+  
+  .main-container {
+    display: flex;
+    border-top: 4px solid #b6b6b6;
+  }
+  
+  .loading-text {
+    margin: 20px 40px;
+  }
+  
+  .navbar-component {
+    width: 30%;
+    background-color: rgb(41, 41, 41);
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .select-station-text {
+    font-size: 15px;
+    padding-left: 10px;
+    color: #b6b6b6;
+    margin: 0;
+  }
+  
+  .station-option {
+    width: 70%;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    padding-left: 20px;
+    color: white
+  }
+  
+  .trainlist-component {
+    width: 70%;
+  }
+  
+  .not-selected-btn {
+    width: 150px;
+    margin: 15px 10px;
+    padding: 5px;
+    background-color: white;
+    border: 2px solid #b6b6b6;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+  }
+  
+  .selected-btn {
+    width: 150px;
+    margin: 15px 10px;
+    padding: 5px;
+    background-color: rgb(41, 41, 41);
+    border: 2px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .train-component {
+    padding: 10px 25px;
+    margin-left: 30px;
+    border-bottom: 2px solid rgb(41, 41, 41);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .train-path {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .train-path-text {
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .right-arrow {
+    margin: 10px;
+  }
+  
+  .train-status {
+    display: flex;
+    align-items: center;
+  }
+  
+  .train-line {
+    padding: 5px 20px;
+    margin-right: 15px;
+    background-color: grey;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .on-time {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .train-time {
+    color: green;
+    font-size: 30px;
+    margin: 0;
+  }
