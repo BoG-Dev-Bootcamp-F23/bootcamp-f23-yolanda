@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
             res.status(200).json({ pokemon: pokeList })
         } catch (e) {
-            res.status(400).json({ error: "no pokemon of this type exist"});
+            res.status(400).json({ error: "no pokemon of this type exist" });
         }
 
     }

@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
     if (req.method === "GET") {
-        const SPECIES_URL = "https://pokeapi.co/api/v2/pokemon-species/";
+        const SPECIES_URL = `https://pokeapi.co/api/v2/pokemon-species/`;
         const { name } = req.query;
 
         const speciesResponse = await fetch(SPECIES_URL + name);
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
                 res.status(200).json({ next: chainData.chain.species.name });
             }
         } catch (e) {
-            res.status(400).json({ error: "no such pokemon exists"});
+            res.status(400).json({ error: "no such pokemon exists" });
         }
     }
 }
